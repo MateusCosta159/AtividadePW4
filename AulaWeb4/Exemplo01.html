@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários Parte 2</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formulários Parte 2</h1>
+    
+    </header>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href=""></a>Home</li>
+            <li><a href="">Informação</a></li>
+            <li><a href=""></a>Contato</li>
+        </ul>
+
+    </nav>
+    <main>
+        <section>
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para informações ou relamações sobre nosso serviço
+            </p>
+        </section>
+        <section>
+            <form action="" method="post">
+                <!--Padrã do elemento form qunado
+                não exixte a definição enviado o formulario "irá"
+                para a mesma pagina-->
+                <!--POST: envia dados para o servidor no corpo da solicitação
+                GET: parametros são passados pela URL, visiveis.
+                -->
+
+                <label>Nome:</label>
+                <input type="text" name="nome" id="nome">
+                <br>
+                <br>
+
+                <label>E-mail:</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <br>
+                <fieldset>
+                    <!--O fielset cria uma "caixinha" para delimitar campos comum-->
+                    <legend>Dados Pessoais</legend>
+                    <!--Cria uma legenda para especificar quais são esses campos comum-->
+                    <label>Endereço</label>
+                    <br>
+                    <textarea name="endereco" id="endereco" cols="80" rows="5"></textarea>
+                    <br>
+                    <br>
+                    <label>Estado:</label>
+                    <select name="estado" id="estado">
+                        <optgroup label="Sudeste">
+                            <option value="sp">São Paulo</option>
+                        </optgroup>
+                        <optgroup label="Sul">
+                            <option value="rs">Rio Grande do Sul</option>
+                        </optgroup>
+                    </select>
+                    <!--o Select cria uma lista de opções para usuario
+                    escolher, ele é vantajoso quando queremos limitar quais
+                    respostas serão dadas para certos campos.
+                    É possivel agrupar opções por meio do elemento optgroup, ele cria 
+                    etiqueta para definir elementos comuns-->
+                    <br>
+                    <br>
+                    <label>Idade:</label>
+                    <input type="number" name="idade" id="idade" step="1" min="0" max="20">
+                    <label>Altura (metros):</label>
+                    <input type="number" name="altura" id="altura" step="0.1" min="0" max="3">
+                    <!--Input tipo do numero(number) pode ser utilizado
+                    em conjuntos com atributo step, que define a variação desse
+                    numero (passo), o atributo min e max, que define o menor e o maior valor aceito naquele input-->
+                    <label>Data:</label>
+                    <input type="date" name="data" id="data">
+                    <br><br>
+                    <label>Cidade:</label>
+                    <input list="cidades" name="cidades" id="cidade">
+                    <datalist id="cidades">
+                        <option value="Araraquara"></option>
+                        <option value="São Carlos"></option>
+                        <option value="Ibaté"></option>
+                    </datalist>
+                    <br>
+                    <br>
+                    <center>
+                    <input type="submit" value="Enviar">
+                   </center>
+                </fieldset>
+              
+            </form>
+        </section>
+
+    </main>
+    <br>
+    <br>
+    <footer>
+        <center>
+            &copy: Formulario teste
+        </center>
+
+    </footer>
+</body>
+
+</html>
